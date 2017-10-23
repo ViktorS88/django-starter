@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+
+  webserver:
+    ports:
+      - "8000:80"
+    environment:
+     - VIRTUAL_HOST=localhost
+     - VIRTUAL_PORT=80

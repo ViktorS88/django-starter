@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+
+  webserver:
+    environment:
+      - VIRTUAL_HOST=dev.project.com
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=dev.project.com
+      - LETSENCRYPT_EMAIL=gabrielfgularte@gmail.com
+
+  django:
+    environment:
+      - DATABASE_HOST
+      - SITE_URL
+      - DEBUG
+      - EMAIL_HOST
+      - EMAIL_PORT
+      - SECRET_KEY
+
+networks:
+  default:
+    external:
+      name: webproxy
