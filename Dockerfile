@@ -2,7 +2,9 @@ FROM python
 
 VOLUME /root
 
-ARG project_name
+ARG PROJECT_NAME
+
+ENV GUNICORN_PROJECT ${PROJECT_NAME}.wsgi:application
 
 WORKDIR /root
 
@@ -12,4 +14,4 @@ RUN pip install -r /requirements.txt
 
 EXPOSE 80
 
-CMD gunicorn --bind 0.0.0.0:80 --reload $project_name.wsgi:application
+CMD gunicorn --bind 0.0.0.0:80 --reload ${GUNICORN_PROJECT}
