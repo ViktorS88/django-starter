@@ -21,4 +21,4 @@ Run `docker-compose up`
 
 
 ## Roadmap
-- [ ] Edit `DATABASE` in `settings.py` to connect with the `database` service
+- [ ] Update `DATABASE` in `settings.py` on install to connect with the `database` service
