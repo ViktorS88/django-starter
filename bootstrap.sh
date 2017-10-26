@@ -23,4 +23,4 @@ su $USER << EOF
 EOF
 
 echo "To activate SSL, run docker-compose up -d in ssl folder after the deploy is finished"
-echo "Create .bash_profile on the $user root folder with all the envvars exported"
+echo "Create .bash_profile on the $USER root folder with all the envvars exported"
