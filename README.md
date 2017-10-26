@@ -16,8 +16,11 @@
 Run `docker-compose up`
 
 ## Deploy
-1. Edit `deploy.sh` with your project envvars (`USER` and `SERVER_URI`)
+1. Edit `deploy.sh` and `docker-compose.prod.yml` with your project envvars (`USER`, `SERVER_URI`, `VIRTUAL_HOST`, `LETSENCRYPT_HOST` and `LETSENCRYPT_EMAIL`)
 2. Run `./deploy.sh`
+
+### Deploy to other environments
+You can copy and rename `docker-compose.prod.yml` replacing `prod` to `dev`, for example, and do the same with `deploy.sh` (in this example will be something like `deploy.dev.sh`) and change the lines that make sense to you to deploy to any enviroment that you have.
 
 
 ## Roadmap
