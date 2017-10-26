@@ -4,10 +4,10 @@ services:
 
   webserver:
     environment:
-      - VIRTUAL_HOST=dev.project.com
+      - VIRTUAL_HOST=project.com
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=dev.project.com
-      - LETSENCRYPT_EMAIL=gabrielfgularte@gmail.com
+      - LETSENCRYPT_HOST=project.com
+      - LETSENCRYPT_EMAIL=example@email.com
 
   django:
     environment:
