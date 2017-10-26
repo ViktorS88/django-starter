@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+USER=ubuntu
+
 timedatectl set-timezone America/Sao_Paulo
 
 apt-get update
@@ -8,12 +10,12 @@ apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
 apt-get update
 apt-get install -y docker-engine git
 
-usermod -aG docker ubuntu
+usermod -aG docker $USER
 
 curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.15.0/docker-compose-$(uname -s)-$(uname -m)"
 chmod +x /usr/local/bin/docker-compose
 
-su ubuntu << EOF
+su $USER << EOF
   mkdir ~/ssl
   cd ~/ssl
   git clone https://github.com/gabrielfgularte/docker-nginx-proxy-letsencrypt.git .
@@ -21,4 +23,4 @@ su ubuntu << EOF
 EOF
 
 echo "Para ativar o SSL, faça o deploy e depois rode docker-compose up -d na pasta ssl"
-echo "Criar .bash_profile na raiz do usuário ubuntu com os exports das envvars"
+echo "Criar .bash_profile na raiz do usuário $USER com os exports das envvars"
