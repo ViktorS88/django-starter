@@ -7,7 +7,7 @@ scp /tmp/application.tar.gz $USER@$PROJECT_URI:/tmp/
 
 scp Dockerfile $USER@$PROJECT_URI:/tmp/
 scp docker-compose.yml $USER@$PROJECT_URI:/tmp/
-scp docker-compose.dev.yml $USER@$PROJECT_URI:/tmp/docker-compose.override.yml
+scp docker-compose.prod.yml $USER@$PROJECT_URI:/tmp/docker-compose.override.yml
 scp nginx.conf $USER@$PROJECT_URI:/tmp/nginx.conf
 
 DATE_NOW=$(date +"%Y%m%d_%H%M%S")
