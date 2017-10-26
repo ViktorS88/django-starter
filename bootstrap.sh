@@ -22,5 +22,5 @@ su $USER << EOF
   docker network create webproxy
 EOF
 
-echo "Para ativar o SSL, faça o deploy e depois rode docker-compose up -d na pasta ssl"
-echo "Criar .bash_profile na raiz do usuário $USER com os exports das envvars"
+echo "To activate SSL, run docker-compose up -d in ssl folder after the deploy is finished"
+echo "Create .bash_profile on the $user root folder with all the envvars exported"
