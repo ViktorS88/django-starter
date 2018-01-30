@@ -40,6 +40,6 @@ docker-compose exec -T django ./manage.py migrate
 docker-compose exec -T django ./manage.py collectstatic --noinput
 cd ~/
 LATEST=$(cat ~/latest.txt)
-docker rmi ${LATEST}_django ${LATEST}_django_robot
+docker rmi ${LATEST}_django
 echo v'${DATE_NOW//_/}' > ~/latest.txt
 '
