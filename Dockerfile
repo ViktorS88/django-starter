@@ -12,6 +12,7 @@ WORKDIR /root
 
 ADD ./application/requirements.txt /requirements.txt
 
+RUN pip install --upgrade pip
 RUN pip install -r /requirements.txt
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
