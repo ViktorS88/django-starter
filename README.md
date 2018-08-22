@@ -1,10 +1,10 @@
 # My own Django starter
 
-- Docker & Docker Compose
-- Nginx & SSL (Let's Encrypt)
-- PostgreSQL
-- Django
-- Gunicorn
+- [Docker](https://www.docker.com/) & [Docker Compose](https://docs.docker.com/compose/)
+- [Nginx](https://www.nginx.com/) & [SSL (Let's Encrypt)](https://letsencrypt.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Django](https://www.djangoproject.com/)
+- [Gunicorn](http://gunicorn.org/)
 
 ## Install (first usage)
 1. Fork this project (or download the master.zip)
