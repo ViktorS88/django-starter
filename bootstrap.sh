@@ -19,6 +19,7 @@ su $USER << EOF
   mkdir ~/ssl
   cd ~/ssl
   git clone https://github.com/gabrielfgularte/docker-nginx-proxy-letsencrypt.git .
+  mkdir nginx/dhparam && openssl dhparam -out nginx/dhparam/dhparam.pem 2048
   docker network create webproxy
 EOF
 
