@@ -11,12 +11,19 @@ services:
 
   django:
     environment:
-      - DATABASE_HOST
-      - SITE_URL
-      - DEBUG
+      - PYTHONUNBUFFERED=1
+      - DEBUG=False
+      - SITE_URL=project.com
+      - CORS_ORIGIN_WHITELIST=project.com
+      - DATABASE_NAME
+      - DATABASE_USER
+      - DATABASE_PASSWORD
+      - SECRET_KEY
       - EMAIL_HOST
       - EMAIL_PORT
-      - SECRET_KEY
+      - EMAIL_HOST_USER
+      - EMAIL_HOST_PASSWORD
+      - EMAIL_USE_TLS
 
 networks:
   default:
